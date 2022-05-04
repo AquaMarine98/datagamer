@@ -1,0 +1,126 @@
+body {
+  background: rgba(180, 180, 180, 0.35);
+
+  font-family: "Poppins", sans-serif;
+
+  margin: 0px;
+}
+
+#TOP_CONTAINER {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#TOP_BAR {
+  height: 15px;
+  width: 125px;
+
+  left: 144px;
+  top: 26px;
+
+  margin: 30px 0px;
+
+  border-radius: 0px;
+
+  background: rgb(206, 206, 206);
+}
+
+#HEIMER_IMG {
+  max-width: 100%;
+  height: auto;
+}
+
+#SUMMONER_SEARCHER {
+  margin: 0px 8px;
+}
+
+#SUMMONER_SEARCHER > div:nth-child(2) h1 {
+  font-weight: 800;
+  font-size: 30px;
+
+  margin: 30px 0px;
+}
+
+#SUMMONER_SEARCHER > div:nth-child(3) p {
+  font-weight: 400;
+  font-size: 10px;
+
+  text-align: center;
+
+  margin: 30px 4px;
+
+  color: rgb(100, 100, 100);
+}
+
+#SUMMONER_SEARCHER > div:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#SUMMONER_SEARCHER > div:nth-child(4) > div {
+  display: flex;
+  flex-direction: row;
+
+  width: 90%;
+
+  align-items: center;
+
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 8px;
+
+  gap: 8px;
+
+  margin-bottom: 12px;
+  padding: 0px 6px;
+
+  background: white;
+
+  font-family: "Poppins", sans-serif;
+}
+
+#SUMMONER_SEARCHER > div:nth-child(4) > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 20px;
+  width: 20px;
+
+  margin: 4px;
+  padding: 4px;
+
+  background: black;
+  border-radius: 3px;
+
+  color: white;
+  font-size: 12px;
+}
+
+.fa-solid::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#SUMMONER_NAME {
+  border: 0px;
+
+  padding: 4px 0px;
+  margin-left: 16px;
+
+  outline: none;
+}
+
+#SEARCH_BUTTON {
+  height: 35px;
+  width: 80px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: black;
+
+  font-family: "Reem Kufi", sans-serif;
+  color: white;
+}
