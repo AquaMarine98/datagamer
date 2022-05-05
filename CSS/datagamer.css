@@ -1,3 +1,9 @@
+:root {
+  --gray-color: rgb(170, 170, 170);
+
+  --gray-background: rgb(220, 220, 220);
+}
+
 body {
   background: rgba(180, 180, 180, 0.35);
 
@@ -37,7 +43,7 @@ h3 {
 
   border-radius: 50%;
 
-  background: rgb(220, 220, 220);
+  background: var(--gray-background);
 }
 
 .icon img {
@@ -54,6 +60,10 @@ h3 {
   margin: 70px 8px 0px;
 }
 
+#BOT_CONTAINER {
+  margin: 0px;
+}
+
 #TOP_BAR {
   height: 15px;
   width: 125px;
@@ -65,7 +75,7 @@ h3 {
 
   border-radius: 0px;
 
-  background: rgb(206, 206, 206);
+  background: var(--gray-background);
 }
 
 #HEIMER_IMG {
@@ -97,10 +107,11 @@ h3 {
   flex-direction: row;
 
   width: 90%;
+  height: 35px;
 
   align-items: center;
 
-  border: 1px solid rgba(128, 128, 128, 0.5);
+  border: 1px solid var(--gray-color);
   border-radius: 8px;
 
   gap: 8px;
@@ -154,7 +165,7 @@ h3 {
   font-weight: 400;
 }
 
-#SEARCH_BUTTON {
+#SEARCH_BUTTON, #SUBMIT_BUTTON {
   height: 35px;
   width: 80px;
 
@@ -177,4 +188,68 @@ h3 {
 
 #MID_CONTAINER p {
   margin: 0px 0px 40px;
+}
+
+#BOT_CONTAINER > div:first-child {
+  background: var(--gray-background);
+}
+
+#BOT_CONTAINER img {
+  width: 300px;
+  height: 80px;
+
+  object-fit: cover;
+  object-position: -50% 100%;
+
+  display: none;
+}
+
+#NEWSLETTER {
+  padding: 12px 0px;
+}
+
+#NEWSLETTER > h2 {
+  margin: 0px 0px 12px;
+}
+
+#NEWSLETTER > p {
+  margin: 0px 0px 6px;
+}
+
+#NEWSLETTER > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#EMAIL {
+  width: 200px;
+  height: 35px;
+
+  padding: 0px 12px;
+
+  border-radius: 8px;
+
+  border: 1px solid var(--gray-color);
+  outline: none;
+
+  margin: 12px 0px;
+}
+
+#SUBMIT_BUTTON {
+  margin-bottom: 0px;
+}
+
+#SOCIAL_NETWORKS {
+  margin-top: 50px;
+}
+
+#SOCIAL_NETWORKS > div {
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: center;
+
+  gap: 24px;
 }
