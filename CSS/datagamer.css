@@ -2,10 +2,12 @@
   --gray-color: rgb(170, 170, 170);
 
   --gray-background: rgb(220, 220, 220);
+
+  --gray-body-background: rgb(235, 235, 235);
 }
 
 body {
-  background: rgba(180, 180, 180, 0.35);
+  background: var(--gray-body-background);
 
   font-family: "Poppins", sans-serif;
 
@@ -49,6 +51,24 @@ h3 {
 .icon img {
   width: 40px;
   height: 40px;
+}
+
+.region-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 20px;
+  width: 20px;
+
+  margin: 4px;
+  padding: 4px;
+
+  background: black;
+  border-radius: 4px;
+
+  color: white;
+  font-size: 12px;
 }
 
 #TOP_CONTAINER {
@@ -102,7 +122,9 @@ h3 {
   align-items: center;
 }
 
-#SUMMONER_SEARCHER > div:nth-child(4) > div {
+#SUMMONER_SEARCHER > div:nth-child(4) > div:first-child {
+  position: relative;
+
   display: flex;
   flex-direction: row;
 
@@ -124,28 +146,67 @@ h3 {
   font-family: "Poppins", sans-serif;
 }
 
-#SUMMONER_SEARCHER > div:nth-child(4) > div > div {
+#DROPDOWN_BUTTON {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
 
-  height: 20px;
-  width: 20px;
+  border-width: 0px;
+  padding: 0px;
+  margin: 0px;
 
-  margin: 4px;
-  padding: 4px;
+  background: none;
+}
 
-  background: black;
-  border-radius: 3px;
+#DROPDOWN_WINDOW.not-showing {
+  display: none;
+}
 
-  color: white;
-  font-size: 12px;
+#DROPDOWN_WINDOW {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+
+  top: 45px;
+  left: 0px;
+
+  gap: 6px;
+
+  width: 100%;
+  max-height: 100px;
+
+  padding: 0px;
+
+  background: var(--gray-body-background);
+}
+
+#DROPDOWN_WINDOW > div {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+#DROPDOWN_WINDOW > div:hover {
+  background: rgb(225, 225, 225);
+}
+
+#DROPDOWN_WINDOW p {
+  margin: 0px;
+
+  padding-left: 8px;
+
+  color: black;
 }
 
 .fa-solid::before {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding-left: 8px;
 }
 
 #SUMMONER_NAME {
@@ -165,7 +226,8 @@ h3 {
   font-weight: 400;
 }
 
-#SEARCH_BUTTON, #SUBMIT_BUTTON {
+#SEARCH_BUTTON,
+#SUBMIT_BUTTON {
   height: 35px;
   width: 80px;
 
@@ -248,7 +310,7 @@ h3 {
 #SOCIAL_NETWORKS > div {
   display: flex;
   flex-direction: row;
-  
+
   justify-content: center;
 
   gap: 24px;
