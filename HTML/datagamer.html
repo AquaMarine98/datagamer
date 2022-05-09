@@ -22,16 +22,16 @@
             <div>
                 <div>
                     <button id="DROPDOWN_BUTTON">
-                        <div class="region-button">LAS</div>
+                        <div class="region-button actual-region">LAS</div>
                         <i class="fa-solid fa-angle-down"></i>
                     </button>
                     <input id="SUMMONER_NAME" type="text" name="summoner_name" placeholder="Nombre de invocador" spellcheck="false" autocapitalize="none">
                     <div id="DROPDOWN_WINDOW" class="not-showing">
-                        <div>
+                        <div class="las">
                             <div class="region-button">LAS</div>
                             <p>LatinoAmerica del Sur</p>
                         </div>
-                        <div>
+                        <div class="lan">
                             <div class="region-button">LAN</div>
                             <p>LatinoAmerica del Norte</p>
                         </div>
@@ -46,7 +46,7 @@
     </section>
     <section id="MID_CONTAINER">
         <div><h2>Tu predicción más reciente.</h2></div>
-        <section>
+        <section id="FEATURES">
             <div>
                 <div class="icon"><div><img src="../Images/Icons/Bars.png" alt=""></div></div>
                 <h3>Predicciones más exactas.</h3>
@@ -90,5 +90,8 @@
     <section id="COPYRIGHT">
         <p>© Copyright 2020-2021 www.datagamer.net. All rights reserved. www.datagamer.net isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games</p>
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../JS/dropdownWindow.js"></script>
 </body>
 </html>
