@@ -320,3 +320,103 @@ h3 {
 
   gap: 24px;
 }
+
+/* Player stats */
+
+#PLAYER_STATS h3, #PLAYER_STATS h5, #PLAYER_STATS p {
+  margin: 0px;
+}
+
+#PLAYER_STATS h5 {
+  font-weight: 400;
+}
+
+#PLAYER_STATS p {
+  color: var(--gray-color)
+}
+
+#PLAYER_STATS > section:first-child {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-evenly;
+
+  margin-bottom: 42px;
+}
+
+#PLAYER > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 120px;
+  height: 120px;
+
+  background: gray;
+
+  border-radius: 50%;
+}
+
+#PLAYER img {
+  width: 110px;
+  height: 110px;
+
+  border-radius: 50%;
+}
+
+#PLAYER_STATS > section > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+}
+
+#PLAYER_STATS > section > div:nth-child(2) > div:nth-child(2) {
+  width: 80%;
+  height: .1px;
+
+  background: rgb(200, 200, 200);
+}
+
+/* Division y winrate */
+#PLAYER_STATS > section > div:nth-child(2) > div:last-child {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+}
+
+/* Match */
+
+#MATCH > div {
+  margin: 0px 4px 42px;
+}
+
+#MATCH > div > div:first-child {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  max-width: 100px;
+}
+
+.match-champ-icon > img {
+  width: 65px;
+  height: 65px;
+
+  border-radius: 50%;
+}
+.spells-container > img {
+  width: 25px;
+  height: 25px;
+
+  border-radius: 8px;
+}
