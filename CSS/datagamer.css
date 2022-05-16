@@ -323,7 +323,9 @@ h3 {
 
 /* Player stats */
 
-#PLAYER_STATS h3, #PLAYER_STATS h5, #PLAYER_STATS p {
+#PLAYER_STATS h3,
+#PLAYER_STATS h5,
+#PLAYER_STATS p {
   margin: 0px;
 }
 
@@ -332,7 +334,7 @@ h3 {
 }
 
 #PLAYER_STATS p {
-  color: var(--gray-color)
+  color: var(--gray-color);
 }
 
 #PLAYER_STATS > section:first-child {
@@ -376,7 +378,7 @@ h3 {
 
 #PLAYER_STATS > section > div:nth-child(2) > div:nth-child(2) {
   width: 80%;
-  height: .1px;
+  height: 0.1px;
 
   background: rgb(200, 200, 200);
 }
@@ -492,7 +494,7 @@ h3 {
   color: rgb(120, 120, 120);
 }
 .score > div {
-  width: .1px;
+  width: 0.1px;
   height: 50%;
 
   background: rgb(200, 200, 200);
@@ -507,7 +509,8 @@ h3 {
   gap: 12px;
 }
 
-.items > h3 {
+.items > h3,
+.players h3 {
   color: rgb(70, 70, 70);
 }
 
@@ -526,12 +529,61 @@ h3 {
 .item1 {
   order: 1;
 }
-.item2, .item3{
+.item2,
+.item3 {
   order: 2;
 }
 .item7 {
   order: 3;
 }
-.item4, .item5, .item6 {
+.item4,
+.item5,
+.item6 {
   order: 4;
+}
+
+/* Players */
+
+.players > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.champs-container {
+  display: grid;
+  grid-template-columns: repeat(5, 30px);
+  grid-template-rows: repeat(2, 30px);
+
+  gap: 4px;
+}
+
+.champs-container > div {
+  width: 30px;
+  height: 30px;
+}
+
+.player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid orange;
+  border-radius: 50%;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+.player > img {
+  width: 110%;
+  height: 110%;
+
+  border-radius: 50%;
+
+  position: 50% 50%;
+
+  object-fit: cover;
 }
