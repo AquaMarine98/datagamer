@@ -73,6 +73,10 @@ h3 {
   text-transform: uppercase;
 }
 
+.is-hidden {
+  display: none;
+}
+
 #TOP_CONTAINER {
   display: flex;
   flex-direction: column-reverse;
@@ -253,10 +257,6 @@ h3 {
   margin: 0px 0px 40px;
 }
 
-#FEATURES.is-hidden {
-  display: none;
-}
-
 #BOT_CONTAINER > div:first-child {
   background: var(--gray-background);
 }
@@ -398,9 +398,10 @@ h3 {
 
 #MATCH > div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 
   gap: 12px 24px;
 
@@ -409,12 +410,12 @@ h3 {
 
 #MATCH > div > div:first-child {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 
   justify-content: center;
   align-items: center;
 
-  max-width: 100px;
+  gap: 40px;
 }
 
 .match-champ-icon > img {
@@ -431,7 +432,8 @@ h3 {
 }
 
 /* Result */
-#MATCH > div > div:nth-child(2) {
+
+#MATCH > div > div > div:nth-child(2) {
   display: flex;
   flex-direction: column;
 
@@ -586,4 +588,26 @@ h3 {
   position: 50% 50%;
 
   object-fit: cover;
+}
+
+/* Arrow */
+
+#MATCH .fa-solid {
+  width: 35px;
+  height: 35px;
+
+  background: black;
+
+  border-radius: 50%;
+
+  margin-top: 12px;
+}
+
+#MATCH .fa-solid::before {
+  width: 100%;
+  height: 100%;
+
+  padding: 0px;
+
+  color: white;
 }
