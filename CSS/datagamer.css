@@ -366,7 +366,7 @@ h3 {
   border-radius: 50%;
 }
 
-#PLAYER_STATS > section > div:nth-child(2) {
+#PLAYER_STATS > section:not(#BEST) > div:nth-child(2) {
   display: flex;
   flex-direction: column;
 
@@ -376,7 +376,7 @@ h3 {
   gap: 8px;
 }
 
-#PLAYER_STATS > section > div:nth-child(2) > div:nth-child(2) {
+#PLAYER_STATS > section:not(#BEST) > div:nth-child(2) > div:nth-child(2) {
   width: 80%;
   height: 0.1px;
 
@@ -384,7 +384,7 @@ h3 {
 }
 
 /* Division y winrate */
-#PLAYER_STATS > section > div:nth-child(2) > div:last-child {
+#PLAYER_STATS > section:not(#BEST) > div:nth-child(2) > div:last-child {
   display: flex;
   flex-direction: row;
 
@@ -525,7 +525,7 @@ h3 {
 }
 
 .items-container img {
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 .item1 {
@@ -561,9 +561,25 @@ h3 {
   gap: 4px;
 }
 
-.champs-container > div {
+.champs-container > div:not(.player) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 30px;
   height: 30px;
+
+  border: 2px solid black;
+  border-radius: 4px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+.champs-container img {
+  width: 32px;
+  height: 32px;
 }
 
 .player {
@@ -577,17 +593,6 @@ h3 {
   box-sizing: border-box;
 
   overflow: hidden;
-}
-
-.player > img {
-  width: 110%;
-  height: 110%;
-
-  border-radius: 50%;
-
-  position: 50% 50%;
-
-  object-fit: cover;
 }
 
 /* Arrow */
@@ -610,4 +615,71 @@ h3 {
   padding: 0px;
 
   color: white;
+}
+
+/* Best champs and roles */
+
+#BEST {
+  display: flex;
+  flex-direction: column;
+}
+
+#BEST > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#BEST img {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+}
+
+#BEST_CHAMPS > div > div, #BEST_ROLES > div > div {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+#BEST h3 {
+  font-size: 12px;
+}
+
+.champ-1 > div,
+.champ-2 > div,
+.role-1 > div,
+.role-2 > div {
+  background: rgb(66, 255, 211);
+
+  padding: 0px 8px;
+
+  margin-left: 12px;
+
+  border-radius: 4px;
+}
+
+#BEST_CHAMPS > div, #BEST_ROLES > div {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-around;
+
+  margin: 8px 0px;
+
+  gap: 12px;
+}
+
+#PLAYER_STATS > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 90%;
+  height: .5px;
+
+  margin: 14px auto 20px;
+
+  background-color: rgb(200, 200, 200);
 }
