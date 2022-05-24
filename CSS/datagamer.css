@@ -5,8 +5,8 @@
 
   --gray-body-background: rgb(235, 235, 235);
 
-  --nunito-font: 'Nunito', sans-serif;
-  
+  --nunito-font: "Nunito", sans-serif;
+
   --poppins-font: "Poppins", sans-serif;
 }
 
@@ -686,7 +686,8 @@ h3 {
   border-radius: 50%;
 }
 
-#BEST_CHAMPS > div > div, #BEST_ROLES > div > div {
+#BEST_CHAMPS > div > div,
+#BEST_ROLES > div > div {
   display: flex;
   flex-direction: row;
 
@@ -710,7 +711,8 @@ h3 {
   border-radius: 4px;
 }
 
-#BEST_CHAMPS > div, #BEST_ROLES > div {
+#BEST_CHAMPS > div,
+#BEST_ROLES > div {
   display: flex;
   flex-direction: row;
 
@@ -727,7 +729,7 @@ h3 {
   align-items: center;
 
   width: 90%;
-  height: .5px;
+  height: 0.5px;
 
   margin: 14px auto 20px;
 
@@ -742,19 +744,25 @@ h3 {
 }
 #ALL_PLAYERS > div {
   width: 90%;
-  height: .1px;
-  
+  height: 0.1px;
+
   background: rgb(200, 200, 200);
 
   margin: 0px auto 16px;
 }
 
 /* Left side */
+#LEFT_SIDE {
+  background: rgb(220, 220, 220);
+  padding: 8px 0px;
+  margin-bottom: 0px;
+}
+
 .left {
   display: flex;
   flex-direction: row;
 
-  justify-content: space-around;
+  justify-content: center;
 
   flex-wrap: wrap;
 
@@ -785,7 +793,7 @@ h3 {
   display: flex;
   flex-direction: row;
 
-  gap: 24px;
+  gap: 45px;
 }
 
 .left > div:nth-child(3) {
@@ -798,7 +806,7 @@ h3 {
   flex-direction: column;
 
   justify-content: space-around;
-} 
+}
 
 /* Name */
 .left {
@@ -820,14 +828,16 @@ h3 {
 
   background-color: black;
 
-  padding: 2px 12px;
+  padding: 4px 12px;
 }
 .left > div:nth-child(2) > div:nth-child(1) > div > h3 {
-  font-weight: 500;
+  font-weight: 700;
 
   color: white;
 
   font-size: 14px;
+
+  letter-spacing: 1px;
 }
 
 /* Score and Cs */
@@ -835,6 +845,8 @@ h3 {
   text-align: end;
 
   color: #838383;
+
+  font-size: 15px;
 }
 .left > div:nth-child(2) > div:nth-child(2) > h3:nth-child(2) {
   font-weight: 500;
@@ -864,6 +876,141 @@ h3 {
 
 /* Separators */
 #LEFT_SIDE > div:nth-child(even) {
+  width: 90%;
+  height: 0.1px;
+
+  background: rgb(200, 200, 200);
+
+  margin: 0px auto 18px;
+}
+
+
+/* Right side */
+
+/* Left side */
+#RIGHT_SIDE {
+  padding: 8px 0px;
+  margin-bottom: 40px;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  margin-bottom: 18px;
+}
+.right > div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+.right > div:nth-child(1) img {
+  width: 62px;
+  height: 62px;
+
+  object-fit: contain;
+}
+
+.right > div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+
+  gap: 45px;
+}
+
+.right > div:nth-child(3) {
+  width: 100%;
+}
+
+/* Name and division all players in match */
+.right > div:nth-child(2) > div {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+}
+
+/* Name */
+.right {
+  font-family: var(--nunito-font);
+}
+.right > div:nth-child(2) > div:nth-child(1) > h3 {
+  text-align: start;
+
+  color: #838383;
+
+  font-size: 15px;
+}
+
+/* Divison*/
+.right > div:nth-child(2) > div:nth-child(1) > div {
+  width: fit-content;
+
+  border-radius: 5px;
+
+  background-color: black;
+
+  padding: 4px 12px;
+}
+.right > div:nth-child(2) > div:nth-child(1) > div > h3 {
+  font-weight: 700;
+
+  color: white;
+
+  font-size: 14px;
+
+  letter-spacing: 1px;
+}
+
+/* Score and Cs */
+.right > div:nth-child(2) > div:nth-child(2) > h3 {
+  text-align: end;
+
+  color: #838383;
+
+  font-size: 15px;
+}
+.right > div:nth-child(2) > div:nth-child(2) > h3:nth-child(2) {
+  font-weight: 500;
+}
+
+/* Items */
+.right > div:nth-child(3) {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+}
+
+.right > div:nth-child(3) img {
+  width: 35px;
+  height: 35px;
+
+  object-fit: contain;
+
+  border-radius: 6px;
+}
+.right > div:nth-child(3) img:nth-child(7) {
+  grid-column-start: 2;
+}
+
+/* Separators */
+#RIGHT_SIDE > div:nth-child(even) {
   width: 90%;
   height: 0.1px;
 
