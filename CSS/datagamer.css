@@ -4,6 +4,10 @@
   --gray-background: rgb(220, 220, 220);
 
   --gray-body-background: rgb(235, 235, 235);
+
+  --nunito-font: "Nunito", sans-serif;
+
+  --poppins-font: "Poppins", sans-serif;
 }
 
 body {
@@ -77,6 +81,51 @@ h3 {
   display: none;
 }
 
+/* match dropdown */
+
+#ALL_PLAYERS.is-hidden {
+  display: none;
+}
+
+#EXPAND-MATCH-BUTTON.expanded {
+  transform: rotateZ(180deg);
+}
+
+#EXPAND-MATCH-BUTTON {
+  transform: rotateZ(0deg);
+}
+/* */
+/* email sent */
+
+.email-sent {
+  display: none;
+}
+
+#EMAIL_SENT {
+  display: none;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  z-index: 1;
+}
+
+#EMAIL_SENT.email-sent {
+  display: flex;
+}
+
+#EMAIL_SENT.email-sent img {
+  display: block;
+}
+
+/* */
+
+
 #TOP_CONTAINER {
   display: flex;
   flex-direction: column-reverse;
@@ -87,7 +136,13 @@ h3 {
 }
 
 #BOT_CONTAINER {
-  margin: 0px;
+  position: relative;
+
+  margin: 100px 0px 100px;
+
+  height: 190px;
+
+  background: var(--gray-background);
 }
 
 #TOP_BAR {
@@ -257,22 +312,26 @@ h3 {
   margin: 0px 0px 40px;
 }
 
-#BOT_CONTAINER > div:first-child {
-  background: var(--gray-background);
-}
-
-#BOT_CONTAINER img {
-  width: 300px;
-  height: 80px;
-
+#BOT_CONTAINER > img:first-child {
+  position: absolute;
   object-fit: cover;
-  object-position: -50% 100%;
 
-  display: none;
+  object-position: -200px;
+
+  height: 100%;
+  width: 100%;
+
+  opacity: .3;
+
+  z-index: 0;
 }
 
 #NEWSLETTER {
+  position: relative;
+
   padding: 12px 0px;
+
+  z-index: 1;
 }
 
 #NEWSLETTER > h2 {
@@ -343,7 +402,7 @@ h3 {
 
   justify-content: space-evenly;
 
-  margin-bottom: 42px;
+  margin-bottom: 18px;
 }
 
 #PLAYER > div:first-child {
@@ -398,24 +457,38 @@ h3 {
 
 #MATCH > div {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 
-  gap: 12px 24px;
+  gap: 8px 16px;
 
-  margin: 0px 4px 42px;
+  margin: 0px 4px 20px;
 }
 
 #MATCH > div > div:first-child {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
-  gap: 40px;
+  height: 105px;
+}
+
+#MATCH > div > div:nth-child(2) > div:nth-child(3) {
+  width: 25%;
+  height: 0.3px;
+  background: rgb(200, 200, 200);
+  margin-top: 9px;
+}
+
+#MATCH > div > div:nth-child(1),
+#MATCH > div > div:nth-child(2),
+#MATCH > div > div:nth-child(3),
+#MATCH > div > div:nth-child(4) {
+  width: 40%;
 }
 
 .match-champ-icon > img {
@@ -433,17 +506,34 @@ h3 {
 
 /* Result */
 
-#MATCH > div > div > div:nth-child(2) {
+#MATCH > div > div:nth-child(2) {
   display: flex;
   flex-direction: column;
 
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 105px;
+
+  gap: 12px;
+}
+
+.division {
+  width: fit-content;
+  padding: 0px 6px;
+}
+
+/* #MATCH > div > div > div:nth-child(2):not(.spells-container) {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
   justify-content: center;
 
   gap: 12px;
 
   letter-spacing: 1px;
-}
+} */
 
 .division {
   border-radius: 6px;
@@ -462,16 +552,20 @@ h3 {
 }
 
 .score {
-  width: 90%;
+  width: 40%;
+  height: 145px;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 
   justify-content: center;
   align-items: center;
 
-  gap: 12px;
+  gap: 6px;
+}
+.score > div {
+  display: none;
 }
 
 .score > h3 {
@@ -489,7 +583,7 @@ h3 {
   font-size: 16px;
 }
 .score > h6 {
-  margin: 0px;
+  margin: 20px 0px 0px;
 
   font-weight: 400;
 
@@ -507,8 +601,15 @@ h3 {
 .items {
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  height: 145px;
 
   gap: 12px;
+
+  position: relative;
+
+  top: -18px;
 }
 
 .items > h3,
@@ -518,8 +619,8 @@ h3 {
 
 .items-container {
   display: grid;
-  grid-template-columns: repeat(4, 30px);
-  grid-template-rows: repeat(2, 30px);
+  grid-template-columns: repeat(3, 30px);
+  grid-template-rows: repeat(3, 30px);
 
   gap: 4px;
 }
@@ -536,12 +637,14 @@ h3 {
   order: 2;
 }
 .item7 {
-  order: 3;
+  order: 4;
+
+  grid-column-start: 2;
 }
 .item4,
 .item5,
 .item6 {
-  order: 4;
+  order: 3;
 }
 
 /* Players */
@@ -555,8 +658,8 @@ h3 {
 
 .champs-container {
   display: grid;
-  grid-template-columns: repeat(5, 30px);
-  grid-template-rows: repeat(2, 30px);
+  grid-template-columns: repeat(5, 40px);
+  grid-template-rows: repeat(2, 40px);
 
   gap: 4px;
 }
@@ -566,8 +669,8 @@ h3 {
   justify-content: center;
   align-items: center;
 
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 
   border: 2px solid black;
   border-radius: 4px;
@@ -578,8 +681,8 @@ h3 {
 }
 
 .champs-container img {
-  width: 32px;
-  height: 32px;
+  width: 42px;
+  height: 42px;
 }
 
 .player {
@@ -598,6 +701,8 @@ h3 {
 /* Arrow */
 
 #MATCH .fa-solid {
+  position: relative;
+
   width: 35px;
   height: 35px;
 
@@ -605,7 +710,7 @@ h3 {
 
   border-radius: 50%;
 
-  margin-top: 12px;
+  top: 20px;
 }
 
 #MATCH .fa-solid::before {
@@ -636,7 +741,8 @@ h3 {
   border-radius: 50%;
 }
 
-#BEST_CHAMPS > div > div, #BEST_ROLES > div > div {
+#BEST_CHAMPS > div > div,
+#BEST_ROLES > div > div {
   display: flex;
   flex-direction: row;
 
@@ -660,7 +766,8 @@ h3 {
   border-radius: 4px;
 }
 
-#BEST_CHAMPS > div, #BEST_ROLES > div {
+#BEST_CHAMPS > div,
+#BEST_ROLES > div {
   display: flex;
   flex-direction: row;
 
@@ -677,9 +784,291 @@ h3 {
   align-items: center;
 
   width: 90%;
-  height: .5px;
+  height: 0.5px;
 
   margin: 14px auto 20px;
 
   background-color: rgb(200, 200, 200);
+}
+
+/* ALL PLAYERS MATCH */
+
+#ALL_PLAYERS {
+  display: flex;
+  flex-direction: column;
+}
+#ALL_PLAYERS > div {
+  width: 90%;
+  height: 0.1px;
+
+  background: rgb(200, 200, 200);
+
+  margin: 0px auto 16px;
+}
+
+/* Left side */
+#LEFT_SIDE {
+  background: rgb(220, 220, 220);
+  padding: 8px 0px;
+  margin-bottom: 0px;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  margin-bottom: 18px;
+}
+.left > div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+.left > div:nth-child(1) img {
+  width: 62px;
+  height: 62px;
+
+  object-fit: contain;
+}
+
+.left > div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+
+  gap: 45px;
+}
+
+.left > div:nth-child(3) {
+  width: 100%;
+}
+
+/* Name and division all players in match */
+.left > div:nth-child(2) > div {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+}
+
+/* Name */
+.left {
+  font-family: var(--nunito-font);
+}
+.left > div:nth-child(2) > div:nth-child(1) > h3 {
+  text-align: start;
+
+  color: #838383;
+
+  font-size: 15px;
+}
+
+/* Divison*/
+.left > div:nth-child(2) > div:nth-child(1) > div {
+  width: fit-content;
+
+  border-radius: 5px;
+
+  background-color: black;
+
+  padding: 4px 12px;
+}
+.left > div:nth-child(2) > div:nth-child(1) > div > h3 {
+  font-weight: 700;
+
+  color: white;
+
+  font-size: 14px;
+
+  letter-spacing: 1px;
+}
+
+/* Score and Cs */
+.left > div:nth-child(2) > div:nth-child(2) > h3 {
+  text-align: end;
+
+  color: #838383;
+
+  font-size: 15px;
+}
+.left > div:nth-child(2) > div:nth-child(2) > h3:nth-child(2) {
+  font-weight: 500;
+}
+
+/* Items */
+.left > div:nth-child(3) {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+}
+
+.left > div:nth-child(3) img {
+  width: 35px;
+  height: 35px;
+
+  object-fit: contain;
+
+  border-radius: 6px;
+}
+.left > div:nth-child(3) img:nth-child(7) {
+  grid-column-start: 2;
+}
+
+/* Separators */
+#LEFT_SIDE > div:nth-child(even) {
+  width: 90%;
+  height: 0.1px;
+
+  background: rgb(200, 200, 200);
+
+  margin: 0px auto 18px;
+}
+
+
+/* Right side */
+
+/* Left side */
+#RIGHT_SIDE {
+  padding: 8px 0px;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  margin-bottom: 18px;
+}
+.right > div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+.right > div:nth-child(1) img {
+  width: 62px;
+  height: 62px;
+
+  object-fit: contain;
+}
+
+.right > div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+
+  gap: 45px;
+}
+
+.right > div:nth-child(3) {
+  width: 100%;
+}
+
+/* Name and division all players in match */
+.right > div:nth-child(2) > div {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+}
+
+/* Name */
+.right {
+  font-family: var(--nunito-font);
+}
+.right > div:nth-child(2) > div:nth-child(1) > h3 {
+  text-align: start;
+
+  color: #838383;
+
+  font-size: 15px;
+}
+
+/* Divison*/
+.right > div:nth-child(2) > div:nth-child(1) > div {
+  width: fit-content;
+
+  border-radius: 5px;
+
+  background-color: black;
+
+  padding: 4px 12px;
+}
+.right > div:nth-child(2) > div:nth-child(1) > div > h3 {
+  font-weight: 700;
+
+  color: white;
+
+  font-size: 14px;
+
+  letter-spacing: 1px;
+}
+
+/* Score and Cs */
+.right > div:nth-child(2) > div:nth-child(2) > h3 {
+  text-align: end;
+
+  color: #838383;
+
+  font-size: 15px;
+}
+.right > div:nth-child(2) > div:nth-child(2) > h3:nth-child(2) {
+  font-weight: 500;
+}
+
+/* Items */
+.right > div:nth-child(3) {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+}
+
+.right > div:nth-child(3) img {
+  width: 35px;
+  height: 35px;
+
+  object-fit: contain;
+
+  border-radius: 6px;
+}
+.right > div:nth-child(3) img:nth-child(7) {
+  grid-column-start: 2;
+}
+
+/* Separators */
+#RIGHT_SIDE > div:nth-child(even) {
+  width: 90%;
+  height: 0.1px;
+
+  background: rgb(200, 200, 200);
+
+  margin: 0px auto 18px;
 }
