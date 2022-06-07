@@ -314,13 +314,14 @@ h3 {
 
 #BOT_CONTAINER > img:first-child {
   position: absolute;
+  object-fit: cover;
+
+  object-position: -200px;
 
   height: 100%;
+  width: 100%;
 
   opacity: .3;
-
-  top: 0;
-  left: -200px;
 
   z-index: 0;
 }
