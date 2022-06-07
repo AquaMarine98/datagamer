@@ -1072,3 +1072,42 @@ h3 {
 
   margin: 0px auto 18px;
 }
+
+
+
+
+/* Pantallas tablets */
+
+@media (min-width: 768px) {
+  #TOP_CONTAINER {
+    flex-direction: row;
+  }
+
+  #TOP_BAR {
+    width: 75px;
+
+    left: 0;
+    top: 0;
+
+    margin: 10px 0px 0px;
+
+    background: #C4C4C4;
+  }
+
+  #SUMMONER_SEARCHER h1, #SUMMONER_SEARCHER p {
+    text-align: start !important;
+
+    margin: 1rem 0px !important;
+  }
+
+  #SUMMONER_SEARCHER > div:nth-child(4) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #SUMMONER_SEARCHER > div:nth-child(4) > div:first-child {
+    width: 70%;
+
+    margin: 0px;
+  }
+}
