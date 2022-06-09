@@ -1,3 +1,13 @@
+@font-face {
+  font-family: gilroyFontExtraBold;
+  src: url(../Fonts/Gilroy-ExtraBold.otf);
+}
+
+@font-face {
+  font-family: gilroyFontLight;
+  src: url(../Fonts/Gilroy-Light.otf);
+}
+
 :root {
   --gray-color: rgb(170, 170, 170);
 
@@ -7,31 +17,39 @@
 
   --nunito-font: "Nunito", sans-serif;
 
-  --poppins-font: "Poppins", sans-serif;
+  --gilroy-font: gilroyFontExtraBold;
+  --gilroy-font-light: gilroyFontLight;
 }
 
 body {
   background: var(--gray-body-background);
 
-  font-family: "Poppins", sans-serif;
+  font-family: var(--gilroy-font);
 
   margin: 0px;
 }
 
 p {
   font-weight: 400;
-  font-size: 10px;
-
-  text-align: center;
+  font-size: 13px;
 
   margin: 30px 4px;
 
-  color: rgb(100, 100, 100);
+  color: #22253D;
 }
 
-h2,
-h3 {
+h1 {
   text-align: center;
+}
+
+p,
+h2,
+h3,
+h5,
+h6 {
+  text-align: center;
+
+  font-family: var(--nunito-font);
 }
 
 .icon {
@@ -296,12 +314,18 @@ h3 {
 
   background: black;
 
-  font-family: "Reem Kufi", sans-serif;
+  font-family: var(--gilroy-font-light);
   color: white;
+
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
-#MID_CONTAINER h2 {
+#MID_CONTAINER h1 {
   margin: 0px 0px 40px;
+
+  font-size: 28px;
 }
 
 #MID_CONTAINER h3 {
@@ -334,8 +358,10 @@ h3 {
   z-index: 1;
 }
 
-#NEWSLETTER > h2 {
+#NEWSLETTER > h1 {
   margin: 0px 0px 12px;
+
+  font-size: 28px;
 }
 
 #NEWSLETTER > p {
@@ -386,10 +412,6 @@ h3 {
 #PLAYER_STATS h5,
 #PLAYER_STATS p {
   margin: 0px;
-}
-
-#PLAYER_STATS h5 {
-  font-weight: 400;
 }
 
 #PLAYER_STATS p {
