@@ -133,12 +133,22 @@ h6 {
   z-index: 1;
 }
 
+#EMAIL_SENT h3 {
+  width: 250px;
+
+  font-size: 22px;
+
+  font-family: var(--gilroy-font);
+}
+
 #EMAIL_SENT.email-sent {
   display: flex;
 }
 
 #EMAIL_SENT.email-sent img {
   display: block;
+
+  width: 40px;
 }
 
 /* */
@@ -158,7 +168,7 @@ h6 {
 
   margin: 100px 0px 100px;
 
-  height: 190px;
+  height: 215px;
 
   background: var(--gray-background);
 }
@@ -1093,6 +1103,14 @@ h6 {
   background: rgb(200, 200, 200);
 
   margin: 0px auto 18px;
+}
+
+
+
+/* Copyrights */
+
+#COPYRIGHT p {
+  font-size: 10px;
 }
 
 
