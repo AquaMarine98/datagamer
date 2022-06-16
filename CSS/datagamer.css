@@ -1405,6 +1405,10 @@ h6 {
     font-size: 14px;
   }
 
+  #DROPDOWN_BUTTON .fa-solid {
+    font-size: 1.1rem;
+  }
+
   #SUMMONER_NAME {
     height: 60%;
 
@@ -1418,6 +1422,18 @@ h6 {
     font-size: 18px;
 
     border-radius: 10px;
+  }
+
+  #DROPDOWN_WINDOW {
+    max-height: none;
+
+    top: 57px;
+
+    padding: 0px 0px 0px 7px;
+  }
+
+  #SUMMONER_SEARCHER #DROPDOWN_WINDOW p {
+    margin: 0px;
   }
 
   #HEIMER_IMG {
