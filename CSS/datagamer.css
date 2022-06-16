@@ -1152,12 +1152,22 @@ h6 {
   }
 
   /* */
+  #MID_CONTAINER {
+    margin: 70px 24px 0px;
+  }
+
+  #MID_CONTAINER > div:first-child {
+    text-align-last: left;
+  }
+
 
   #PLAYER_STATS {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 
     flex-wrap: wrap;
+
+    gap: 20px 0px;
   }
 
   #PLAYER_STATS > section:first-child {
@@ -1179,38 +1189,57 @@ h6 {
   }
 
   #MATCH > div {
-  
-    gap: 2px 34px;
+    gap: 20px 15px;
   
     margin: 0px;
+
+    justify-content: flex-start;
+  }
+
+  .match-champ-icon > img {
+    width: 80px;
+    height: 80px;
+  }
+
+  #MATCH > div > div:nth-child(2) {
+    align-items: flex-start;
+
+    margin-right: 17px;
   }
 
   #MATCH > div > div:nth-child(1),
   #MATCH > div > div:nth-child(2),
   #MATCH > div > div:nth-child(3) {
-    width: 20%;
+    width: auto;
     height: auto;
   }
 
-  .score > h6 {
-    display: none;
-  }
-
   #MATCH > div > div:nth-child(4) {
-    width: 216px !important;
+    width: auto;
     height: 120px !important;
 
-    margin-right: -44px;
+    margin-right: 40px;
   }
 
   #MATCH > div > div:nth-child(2) > div:nth-child(3) {
     display: none;
   }
 
+  .score {
+    gap: 0px;
+  }
+  .score > h3 {
+    font-size: 16px;
+  }
+  .score > h6 {
+    margin-top: 10px;
+  }
+
   /* ITEMS CONTAINER */
 
   .items {
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: space-between;
 
     height: 100%;
 
@@ -1220,14 +1249,61 @@ h6 {
   }
 
   .items-container {
-    grid-template-columns: repeat(4, 30px);
-    grid-template-rows: repeat(2, 30px);
+    grid-template-columns: repeat(4, 40px);
+    grid-template-rows: repeat(2, 40px);
+  }
+
+  .items-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid black;
+    border-radius: 4px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+  }
+  .items-container > div > img {
+    width: 40px;
+    height: 40px;
   }
 
   .item7 {
-    grid-column-start: 3;
+    order: 2;
+
+    grid-column-start: 4;
   }
 
+  .players > div:first-child {
+    align-items: flex-start;
+  }
+
+  /* PLAYERS MATCH */
+  
+  #ALL_PLAYERS {
+    width: 100%;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #ALL_PLAYERS > div:first-child {
+    width: 100%;
+  }
+
+  #LEFT_SIDE {
+    border-radius: 0 0 0 10px;
+  }
+
+  #LEFT_SIDE,
+  #RIGHT_SIDE {
+    width: 50%;
+  }
 
   /* NEWSLETTER */
 
