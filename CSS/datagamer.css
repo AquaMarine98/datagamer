@@ -35,7 +35,7 @@ p {
 
   margin: 30px 4px;
 
-  color: #22253d;
+  color: #000000;
 }
 
 h1 {
@@ -96,7 +96,7 @@ h6 {
 }
 
 .is-hidden {
-  display: none;
+  display: none !important;
 }
 
 /* match dropdown */
@@ -337,9 +337,9 @@ h6 {
   font-size: 28px;
 }
 
-#MID_CONTAINER h3 {
+/* #MID_CONTAINER h3 {
   margin: 12px 0px;
-}
+} */
 
 #MID_CONTAINER p {
   margin: 0px 0px 40px;
@@ -466,11 +466,11 @@ h6 {
   gap: 8px;
 }
 
-#PLAYER_STATS > section:not(#BEST) > div:nth-child(2) > div:nth-child(2) {
+#PLAYER > div:nth-child(2) > div:nth-child(2) {
   width: 80%;
   height: 0.1px;
 
-  background: rgb(200, 200, 200);
+  background: #BBBBBB;
 }
 
 /* Division y winrate */
@@ -506,6 +506,8 @@ h6 {
   align-items: center;
 
   height: 105px;
+
+  gap: 2px;
 }
 
 #MATCH > div > div:nth-child(2) > div:nth-child(3) {
@@ -522,11 +524,17 @@ h6 {
   width: 40%;
 }
 
-.match-champ-icon > img {
+.match-champ-icon {
   width: 65px;
   height: 65px;
 
   border-radius: 50%;
+
+  overflow: hidden;
+}
+.match-champ-icon > img {
+  width: 65px;
+  width: 65px;
 }
 .spells-container > img {
   width: 25px;
@@ -551,22 +559,7 @@ h6 {
 
 .division {
   width: fit-content;
-  padding: 0px 6px;
-}
 
-/* #MATCH > div > div > div:nth-child(2):not(.spells-container) {
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
-  gap: 12px;
-
-  letter-spacing: 1px;
-} */
-
-.division {
   border-radius: 6px;
 
   padding: 0px 8px;
@@ -605,8 +598,6 @@ h6 {
 
 .score > h3:first-child {
   font-weight: 600;
-
-  letter-spacing: 2px;
 }
 .score > h3:nth-child(2) {
   font-size: 20px;
@@ -650,8 +641,8 @@ h6 {
 
 .items-container {
   display: grid;
-  grid-template-columns: repeat(3, 30px);
-  grid-template-rows: repeat(3, 30px);
+  grid-template-columns: repeat(3, 28px);
+  grid-template-rows: repeat(3, 28px);
 
   gap: 4px;
 }
@@ -689,8 +680,8 @@ h6 {
 
 .champs-container {
   display: grid;
-  grid-template-columns: repeat(5, 40px);
-  grid-template-rows: repeat(2, 40px);
+  grid-template-columns: repeat(5, 38px);
+  grid-template-rows: repeat(2, 38px);
 
   gap: 4px;
 }
@@ -1189,9 +1180,13 @@ h6 {
     justify-content: flex-start;
   }
 
+  .match-champ-icon {
+    width: 65px;
+    height: 65px;
+  }
   .match-champ-icon > img {
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
   }
 
   #MATCH > div > div:nth-child(2) {
@@ -1242,8 +1237,8 @@ h6 {
   }
 
   .items-container {
-    grid-template-columns: repeat(4, 40px);
-    grid-template-rows: repeat(2, 40px);
+    grid-template-columns: repeat(4, 38px);
+    grid-template-rows: repeat(2, 38px);
   }
 
   .items-container > div {
@@ -1254,7 +1249,6 @@ h6 {
     width: 40px;
     height: 40px;
 
-    border: 2px solid black;
     border-radius: 4px;
 
     box-sizing: border-box;
@@ -1353,11 +1347,11 @@ h6 {
 
 @media (min-width: 1440px) {
   body {
-    margin: 20px 80px;
+    margin: 26px 145px 0px;
   }
 
   p {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   /* TOP SIDE */
@@ -1445,5 +1439,218 @@ h6 {
 
     top: 0px;
     right: 0px;
+  }
+
+  /* MIDDLE SIDE */
+
+  #MID_CONTAINER {
+    margin: 16rem 0px 70px;
+  }
+
+  #MID_CONTAINER > div:first-child {
+    height: 60px;
+
+    margin: 0px 0px 70px;
+  }
+
+  #MID_CONTAINER h1 {
+    font-size: 36px;
+
+    margin: 0px;
+  }
+
+  /* FEATURES */
+
+  #FEATURES {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: center;
+
+    gap: 28px;
+    margin-bottom: 108px;
+  }
+
+  #FEATURES > div {
+    width: 368px;
+    height: 304px;
+    
+    display: flex;
+    flex-direction: column;
+
+    flex-wrap: nowrap;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon > div {
+    width: 100px;
+    height: 100px;
+  }
+  .icon img {
+    width: 44px;
+    height: 44px;
+  }
+
+  #FEATURES h3 {
+    width: 240px;
+    height: 24px;
+
+    line-height: 24px;
+    font-size: 20px;
+    font-weight: 800;
+
+    margin: 17px 0px 23px;
+  }
+
+  #FEATURES p {
+    width: 260px;
+    height: 48px;
+
+    margin: 0px;
+  }
+
+  /* USER AND LAST MATCH */
+
+  #PLAYER_STATS {
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  #PLAYER_STATS > section:first-child {
+    width: 270px;
+    height: 305px;
+
+    justify-content: center;
+  }
+
+  #PLAYER > div:first-child {
+    width: 130px;
+    height: 130px;
+  }
+  #PLAYER img {
+    width: 120px;
+    height: 120px;
+  }
+
+  #PLAYER h3 {
+    margin: 14px 0px;
+  }
+
+  #PLAYER > div:nth-child(2) > p {
+    margin: 16px 0px 6px;
+  }
+
+  #PLAYER > div:nth-child(2) > div:nth-child(2) {
+    width: 55px;
+  }
+
+  #MATCH {
+    width: 850px;
+  }
+
+  #MATCH > div {
+    justify-content: center;
+
+    margin: 12px 20px 0px;
+
+    gap: 24px;
+  }
+
+  .match-champ-icon {
+    width: 86px;
+    height: 86px;
+  }
+  .match-champ-icon > img {
+    width: auto;
+    height: auto;
+  }
+  .spells-container > img {
+    width: 27.5px;
+    height: 27.5px;
+  }
+  #MATCH > div > div:first-child {
+    gap: 12.5px;
+  }
+
+  .result {
+    font-size: 20px;
+
+    line-height: 27.5px;
+  }
+
+  #MATCH > div > div:nth-child(2) {
+    margin: 0px;
+
+    gap: 8px;
+  }
+  .division {
+    height: 25.5px;
+
+    display: flex;
+    align-items: center;
+  }
+  .division > h3 {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+
+  .score {
+    width: 145px !important;
+  }
+  .score > h3:first-child {
+    font-size: 18px;
+  }
+  .score > h6 {
+    font-size: 12px;
+
+    margin-top: 14px;
+  }
+
+  /* ITEMS AND PLAYERS */
+
+  #MATCH > div > div:nth-child(4) {
+    margin: 0px;
+  }
+
+  .items {
+    justify-content: center;
+
+    gap: 12px;
+  }
+
+  .items-container {
+    grid-template-columns: repeat(4, 30px);
+    grid-template-rows: repeat(2, 30px);
+  }
+  .champs-container {
+    grid-template-columns: repeat(5, 30px);
+    grid-template-rows: repeat(2, 30px);
+  }
+  .items-container > div,
+  .champs-container > div:not(.player) {
+    width: 30px;
+    height: 30px;
+  }
+  .items-container > div > img,
+  .champs-container > div > img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #MATCH .fa-solid {
+    width: 38px;
+    height: 38px;
+
+    top: 0px;
+  }
+
+  /* BOT CONTAINER */
+
+  #BOT_CONTAINER {
+    margin: 0px;
   }
 }
