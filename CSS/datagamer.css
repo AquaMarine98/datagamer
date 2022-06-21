@@ -456,7 +456,7 @@ h6 {
   border-radius: 50%;
 }
 
-#PLAYER_STATS > section:not(#BEST) > div:nth-child(2) {
+#PLAYER > div:nth-child(2) {
   display: flex;
   flex-direction: column;
 
@@ -1431,14 +1431,14 @@ h6 {
   }
 
   #HEIMER_IMG {
-    width: 768px;
+    width: 728px;
 
     object-fit: contain;
 
     position: absolute;
 
     top: 0px;
-    right: 0px;
+    right: -40px;
   }
 
   /* MIDDLE SIDE */
@@ -1551,12 +1551,21 @@ h6 {
     width: 850px;
   }
 
-  #MATCH > div {
+  #MATCH > div:nth-child(1) {
     justify-content: center;
 
     margin: 12px 20px 0px;
 
     gap: 24px;
+  }
+
+  #MATCH > div:nth-child(2) {
+    width: 90%;
+    height: .1px;
+
+    background: #BBBBBB;
+
+    margin: 23.5px auto;
   }
 
   .match-champ-icon {
