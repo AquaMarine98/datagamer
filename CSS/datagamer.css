@@ -1515,7 +1515,6 @@ h6 {
   /* USER AND LAST MATCH */
 
   #PLAYER_STATS {
-    justify-content: flex-start;
     gap: 24px;
   }
 
@@ -1656,6 +1655,112 @@ h6 {
 
     top: 0px;
   }
+
+
+  /* MATCH / ALL PLAYERS */
+
+  #ALL_PLAYERS {
+    width: 850px;
+    margin: 0px 0px 0px auto;
+
+    justify-content: flex-end;
+  }
+  #ALL_PLAYERS > div:first-child {
+    display: none;
+  }
+
+  #LEFT_SIDE {
+    background: none;
+
+    padding: 8px 4px 0px 5px;
+    
+    width: auto;
+  }
+  #RIGHT_SIDE {
+    border-radius: 0 0 10px 0;
+
+    background: rgb(220, 220, 220);
+
+    padding: 8px 21.5px 0px 4px;
+
+    width: auto;
+  }
+
+  #LEFT_SIDE .left:nth-child(1n+2),
+  #RIGHT_SIDE .right:nth-child(1n+2) {
+    margin-top: 16px;
+    margin-bottom: 12px;
+  }
+
+  .left,
+  .right {
+    align-items: center;
+    justify-content: space-around;
+
+    gap: 21px;
+  }
+
+  .left > div:nth-child(2),
+  .right > div:nth-child(2) {
+    gap: 0px;
+
+    width: 190px;
+  }
+
+  .left > div:nth-child(2) > div:nth-child(1),
+  .right > div:nth-child(2) > div:nth-child(1) {
+    margin-right: auto;
+  }
+
+  .left > div:nth-child(3),
+  .right > div:nth-child(3) {
+    display: grid;
+    grid-template-columns: repeat(4, 25px);
+    grid-template-rows: repeat(2, 25px);
+
+    width: auto;
+
+    gap: 2px;
+  }
+
+  .left > div:nth-child(3) img,
+  .right > div:nth-child(3) img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .left > div:nth-child(3) img:nth-child(7),
+  .right > div:nth-child(3) img:nth-child(7) {
+    grid-column-start: 4;
+    grid-row-start: 1;
+  }
+
+  #LEFT_SIDE > div:nth-child(even),
+  #RIGHT_SIDE > div:nth-child(even) {
+    width: 100%;
+
+    margin: 0px;
+  }
+
+  .left > div:nth-child(2) > div:nth-child(1) > div,
+  .right > div:nth-child(2) > div:nth-child(1) > div {
+    padding: 2px 12px;
+  }
+  .left > div:nth-child(2) > div:nth-child(1) > div > h3,
+  .right > div:nth-child(2) > div:nth-child(1) > div > h3 {
+    font-size: 13px;
+  }
+  .left > div:nth-child(2) > div:nth-child(2) > h3:first-child,
+  .right > div:nth-child(2) > div:nth-child(2) > h3:first-child {
+    font-size: 13px;
+  }
+  .left > div:nth-child(2) > div:nth-child(2) > h3:last-child,
+  .right > div:nth-child(2) > div:nth-child(2) > h3:last-child {
+    font-size: 12px;
+  }
+
+
+
 
   /* BOT CONTAINER */
 
