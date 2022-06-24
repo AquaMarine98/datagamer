@@ -323,10 +323,9 @@ h6 {
 
   background: black;
 
-  font-family: var(--gilroy-font-light);
+  font-family: var(--gilroy-font);
   color: white;
 
-  font-weight: 800;
   font-size: 12px;
   letter-spacing: 1px;
 }
@@ -1299,7 +1298,7 @@ h6 {
 
     overflow: hidden;
 
-    border-radius: 6px;
+    border-radius: 10px;
   }
 
   #BOT_CONTAINER > img:first-child {
@@ -1386,6 +1385,8 @@ h6 {
     height: 56px;
 
     border-radius: 10px;
+
+    box-sizing: border-box;
   }
 
   .region-button {
@@ -1767,6 +1768,56 @@ h6 {
   /* BOT CONTAINER */
 
   #BOT_CONTAINER {
+    height: 230px;
+
     margin: 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #BOT_CONTAINER > img:first-child {
+    object-position: 0px;
+  }
+
+  #NEWSLETTER {
+    top: 0px;
+    right: -220px;
+  }
+
+  #EMAIL {
+    width: 300px;
+    height: 56px;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+  }
+
+  #EMAIL_SENT {
+    width: 100%;
+
+    right: -220px;
+  }
+
+  #EMAIL_SENT.email-sent img {
+    width: 44px;
+    height: 44px;
+  }
+
+  #EMAIL_SENT h3 {
+    width: 300px;
+    
+    font-size: 25px;
+  }
+
+  #COPYRIGHT {
+    width: 854px;
+    margin: 0px auto 0px;
+  }
+
+  #COPYRIGHT p {
+    font-size: 12px;
   }
 }
