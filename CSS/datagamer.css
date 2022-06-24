@@ -1433,12 +1433,14 @@ h6 {
   #HEIMER_IMG {
     width: 728px;
 
-    object-fit: contain;
+    object-fit: cover;
 
     position: absolute;
 
     top: 0px;
-    right: -40px;
+    right: 0px;
+
+    object-position: 40px 100%;
   }
 
   /* MIDDLE SIDE */
