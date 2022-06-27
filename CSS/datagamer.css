@@ -328,6 +328,10 @@ h6 {
 
   font-size: 12px;
   letter-spacing: 1px;
+
+  transition: 0.3s;
+
+  cursor: pointer;
 }
 
 #MID_CONTAINER h1 {
